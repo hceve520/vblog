@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="<%= prefix %>/assets/public/img/favicon.ico">
+  <title><%= title %></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="<%= prefix %>/assets/app.css">
+  <style type="text/css">
+    html,body{
+            height:100%;
+        }
+        body{
+            margin: 0px 0px 0px 0px;
+        }
+        @font-face{
+          font-family: DS-DIGIB;
+          src: url('<%= prefix %>/assets/public/fonts/DS-Digital.ttf');
+        }
+  </style>
+  
+  <!-- 正式环境中,请将上面几个链接替换为下面的链接,注意 {version} 改为你对应的资源版本号 -->
+  <!--<link rel="stylesheet" href="//g.alicdn.com//{version}??lib/next.css,pages/help/index.bundle.css">-->
+  <link rel="shortcut icon" href="<%= prefix %>/assets/public/img/favicon.ico" type="image/vnd.microsoft.icon" />
+</head>
+<body>
+<div id="container" style="width:100%;height:100%;"></div>
+<script type="text/javascript">
+  window.CSRF_TOKEN = "<%= csrfToken %>"
+  window.reqPrefix = "<%= reqPrefix %>"
+  window.uppsPrefix = "<%= uppsPrefix %>"
+  window.menu_qz = JSON.parse(unescape("<%= menu_qz %>"))
+  window.cityInfoReqPrefix = "<%= cityInfoReqPrefix %>"
+  window.commonUserReqPrefix = "<%= commonUserReqPrefix %>"
+  window.logoutPage = "<%= logoutPage %>"
+  // window.TILE_URL = 'http://101.132.143.61:25003/v3/tile?z={z}&x={x}&y={y}'
+  window.mapServer = unescape("<%= mapServer %>")
+  window.prefix = "<%= prefix %>",
+  window.userInfo = JSON.parse(unescape("<%= userInfo %>"))
+  window.cityData = {
+    unAuthComs:[]
+  }
+  var cw = document.documentElement.clientWidth;
+        if (cw > 1920) {
+            cw = 1920;
+        }
+  document.getElementsByTagName("html")[0].style.fontSize = 16 * ( cw / 1920) + 'px';
+</script>
+<!-- 需要替换的链接 Start -->
+<script src="<%= prefix %>/assets/utils/moment.min.js"></script>
+<% if (isDebug) { %>
+  <link rel="stylesheet" href="<%= prefix %>/assets/node_modules/antd/dist/antd.css">
+  <script src="<%= prefix %>/assets/node_modules/babel-polyfill/dist/polyfill.js"></script>
+  <script src="<%= prefix %>/assets/node_modules/react/dist/react-with-addons.js"></script>
+  <script src="<%= prefix %>/assets/node_modules/lodash/lodash.min.js"></script>
+  <script src="<%= prefix %>/assets/node_modules/react-dom/dist/react-dom.js"></script>
+  <script src="<%= prefix %>/assets/node_modules/react-router/umd/ReactRouter.js"></script>
+  <script src="<%= prefix %>/assets/node_modules/antd/dist/antd.js"></script>
+<% } else { %>
+  <!-- <link rel="stylesheet" href="<%= prefix %>/assets/lib/antd.min.css">
+  <script src="<%= prefix %>/assets/lib/polyfill.js"></script>
+  <script src="<%= prefix %>/assets/lib/react-with-addons.min.js"></script>
+  <script src="<%= prefix %>/assets/lib/lodash.min.js"></script>
+  <script src="<%= prefix %>/assets/lib/react-dom.min.js"></script>
+  <script src="<%= prefix %>/assets/lib/ReactRouter.min.js"></script>
+  <script src="<%= prefix %>/assets/lib/antd.min.js"></script> -->
+  <link href="https://cdn.bootcss.com/antd/3.5.0/antd.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.6.2/react-with-addons.min.js"></script>
+  <script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="https://cdn.bootcss.com/react-dom/15.6.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/react-router/3.2.1/ReactRouter.min.js"></script>
+  <script src="https://cdn.bootcss.com/antd/3.5.0/antd.min.js"></script>
+<% } %>
+
+<script type="text/javascript" src="<%= prefix %>/assets/vendor.js"></script>
+<script type="text/javascript" src="<%= prefix %>/assets/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+{
+  "name": "entry",
+  "version": "2018.03.11",
+  "build": "1",
+  "description": "entry",
+  "main": "app.js",
+  "scripts": {
+    "test": "standard --verbose | snazzy",
+    "postpack": "rm -f gitignore",
+    "checkFormat": "./checkFormat.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.iwhalecloud.com/jtgl/control/zt-evl-optimization/tree/web/entry"
+  },
+  "pre-commit": {
+    "run": [
+      "checkFormat"
+    ],
+    "silent": true
+  },
+  "standard": {
+    "ignore": [
+      "/test/",
+      "/document/",
+      "node_modules",
+      "/out/"
+    ],
+    "parser": "babel-eslint"
+  },
+  "author": "hceve520",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "hc-bee": "^0.1.6",
+    "hc-common-user-auth": "^1.0.19",
+    "hc-proxy": "^1.0.0",
+    "lodash": "4.17.4",
+    "path-ignore": "^1.0.1",
+    "compression":"1.7.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "api-annotation": "^1.0.0-alpha.2",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^24.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "honeypack": "^1.0.11",
+    "intelli-espower-loader": "^1.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2",
+    "power-assert": "^1.4.4",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1",
+    "supertest": "^3.0.0"
+  }
+}

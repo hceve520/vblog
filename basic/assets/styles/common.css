@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #103447;
+  font-family: 'NotoSansHans', 'PingFangSC', 'microsoft yahei', 'helvetica', 'arial', 'simsun', 'sans-serif';
+}
+
+@font-face {
+  font-family: 'DINAlternate-Bold';
+  src: url('../public/fonts/numfont/iconfont.eot');
+  src: url('../public/fonts/numfont/iconfont.eot?#iefix') format('embedded-opentype'), url('../public/fonts/numfont/iconfont.woff') format('woff'), url('../public/fonts/numfont/iconfont.ttf') format('truetype'), url('../public/fonts/numfont/iconfont.svg#iconfont') format('svg');
+}
+
+.num {
+  font-family: "DINAlternate-Bold";
+  color: #00C1DE;
+}
+
+.c-loading {
+  padding: 100px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.event-icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+}
+
+.gas-icon {
+  width: 35px;
+  height: 35px;
+  float: left;
+}
+
+.icon110 {
+  background: url(../public/img/icon110.png) no-repeat center top;
+  background-size: cover;
+}
+
+.icon119 {
+  background: url(../public/img/icon119.png) no-repeat center top;
+  background-size: cover;
+}
+
+.icon120 {
+  background: url(../public/img/icon120.png) no-repeat center top;
+  background-size: cover;
+}
+
+.icon122 {
+  background: url(../public/img/icon122.png) no-repeat center top;
+  background-size: cover;
+}
+
+.iconNot {
+  background: url(../public/img/iconNot.png) no-repeat center top;
+  background-size: cover;
+}
+
+.iconOther {
+  background: url(../public/img/iconOther.png) no-repeat center top;
+  background-size: cover;
+}
+
+.icon-camera {
+  background: url(../public/img/camera.png) no-repeat center top;
+  background-size: cover;
+}
+
+
+/* 设置滚动条的样式 */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+/* 滚动槽 */
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+
+/* 滚动条滑块 */
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 193, 222, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 193, 222, 0.40);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 193, 222, 0.40);
+  -webkit-border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #0d3148;
+}
+
+;
+
+/* 应用于所有情况
+@-moz-document url-prefix(chrome://), url-prefix(about:),
+url-prefix(file:///), url-prefix(http://), url-prefix(https://){
+*/
+
+
+/* 滚动条背景基本样式 */
+
+scrollbar {
+  -moz-appearance: none !important;
+  background-color: transparent !important;
+  /* 滚动条背景透明 */
+  background-image: none !important;
+  /* 滚动条背景图案不显示 */
+  position: relative !important;
+  /* 更改滚动条的定位方式为相对 */
+  overflow: hidden !important;
+  z-index: 999999999 !important;
+  /* 把滚动条提到Z轴最上层 */
+}
+
+
+/* 滚动条按钮基本样式 */
+
+scrollbar thumb {
+  -moz-appearance: none !important;
+  background-color: rgba(0, 193, 222, 0.5) !important;
+  border-radius: 10px !important;
+  border: 0px !important;
+  /* 滚动条按钮边框 */
+  border-color: rgba(0, 100, 255, .1) !important;
+  /* 滚动条按钮边框颜色和透明度 */
+}
+
+
+/* 滚动条按钮:鼠标悬停与点击拖动时基本样式 */
+
+scrollbar:hover thumb, scrollbar thumb:hover, scrollbar thumb:active {
+  background-color: rgba(0, 193, 222, 0.40) !important;
+  border: 0px !important;
+}
+
+
+/* 垂直滚动条 */
+
+
+/* 把滚动条位置移到屏幕外，这里的像素应该等于垂直滚动条宽度的负值 */
+
+scrollbar[orient="vertical"] {
+  margin-left: -5px !important;
+  min-width: 5px !important;
+  max-width: 5px !important;
+}
+
+
+/* 垂直滚动条按钮的左边框样式 */
+
+scrollbar thumb[orient="vertical"] {
+  border-style: none none none solid !important;
+}
+
+
+/* 水平滚动条 */
+
+
+/* 把滚动条位置移到屏幕外，这里的像素应该等于垂直滚动条宽度的负值 */
+
+scrollbar[orient="horizontal"] {
+  margin-top: -5px !important;
+  min-height: 5px !important;
+  max-height: 5px !important;
+}
+
+
+/* 水平滚动条按钮的上边框样式 */
+
+scrollbar thumb[orient="horizontal"] {
+  border-style: solid none none none !important;
+}
+
+
+/* 去除垂直与水平滚动条相交汇的角落 */
+
+scrollbar scrollcorner {
+  display: none ! important;
+}
+
+
+/* 滚动条两端按钮不显示 */
+
+scrollbar scrollbarbutton {
+  display: none ! important;
+}
+
+.camera-marker {
+  z-index: 9999!important
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+  background: rgba(32, 65, 90, 1)!important;
+  border: 1px solid rgba(255, 255, 255, 0.10)!important;
+  border-radius: 2px!important;
+  color: #adbac2!important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 2px;
+  background: rgba(32, 65, 90, 1);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.leaflet-popup-tip-container {
+  margin-top: -1px;
+}
+
+.leaflet-popup-tip {
+  background: rgba(32, 65, 90, 1);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+h5 {
+  color: white
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+  /*background: rgba(32,65,90,0.5)!important;*/
+  border: 1px solid rgba(255, 255, 255, 0.10)!important;
+  border-radius: 2px!important;
+  color: #adbac2!important;
+  float: left;
+  margin: 0 2px;
+}

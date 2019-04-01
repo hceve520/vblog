@@ -4,6 +4,7 @@
     "desc":"app小程序块注册列表v0.6.beta",
     "appList":[
         {"name":"home","path":"home","component":"home"},
-        {"name":"home2","path":"home2","component":"home2"}
+        {"name":"home2","path":"home2","component":"home2"},
+        {"name":"updateLog","path":"updateLog","component":"updateLog"}
     ]
 }

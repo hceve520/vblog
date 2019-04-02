@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import { observer, inject } from 'mobx-react'
 import { Row ,Col} from 'antd'
 import UpdateTimeline from '../../components/UpdateTimeline'
+import Sider from '../../components/Sider'
 
 @inject('UI')
 @observer
@@ -12,21 +13,34 @@ export default class UpdateLog extends Component{
         }
     
         render() {
-            return <Row>
+            return<div>
+                    <Row style={{marginTop: 10,marginBottom:10}}>
+                        <Col
+                                lg={{ span: 0 }}
+                                md={{ span: 0 }}
+                                xs={{ span: 24 }}
+                            >
+                            <Sider />
+                        </Col>
+                    </Row>
+                    <Row style={{paddingTop:20}}>
                     <Col
-                            lg={{ span: 12, offset: 1 }}
-                            md={{ span: 12, offset: 1 }}
-                            xs={{ span: 0 }}
-                        >
-                        <UpdateTimeline />
-                    </Col>
-                    <Col
-                            lg={{ span: 0 }}
-                            md={{ span: 0 }}
+                            lg={{ span: 16, offset: 1 }}
+                            md={{ span: 16, offset: 1 }}
                             xs={{ span: 24 }}
                         >
                         <UpdateTimeline />
                     </Col>
+                    <Col
+                        lg={{ span: 6, offset: 1 }}
+                        md={{ span: 6, offset: 1 }}
+                        xs={{ span: 0 }}
+                    >
+                        <Sider />
+                    </Col>
+                    
                 </Row>
+            </div> 
+                
         }
 }

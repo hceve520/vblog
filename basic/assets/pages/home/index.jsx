@@ -18,7 +18,7 @@ class Home extends Component {
 
     render() {
         return <div>
-                <Row style={{marginTop: 20}}>
+                <Row style={{marginTop: 10,marginBottom:10}}>
                 <Col
                     lg={{ span: 0 }}
                     md={{ span: 0 }}

@@ -111,7 +111,8 @@ const config = {
     'bizcharts': 'BizCharts',
     'intl': 'Intl',
     'echarts':'echarts',
-    antd:'antd'
+    antd:'antd',
+    'nprogress':'NProgress'
   },
 
   plugins: [

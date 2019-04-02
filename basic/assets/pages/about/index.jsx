@@ -21,8 +21,8 @@ export default class About extends Component{
         <Row>
             <Col
                 className="about-wrapper"
-                lg={{ span: 15, offset: 1 }}
-                md={{ span: 15, offset: 1 }}
+                lg={{ span: 16, offset: 1 }}
+                md={{ span: 16, offset: 1 }}
                 xs={{ span: 24 }}
             >
                 <Card bordered={false} style={{ marginBottom: 10 }} title="关于我">

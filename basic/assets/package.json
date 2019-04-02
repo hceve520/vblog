@@ -22,6 +22,7 @@
         "gravatar": "^1.8.0",
         "mobx": "^5.9.0",
         "mobx-react": "^5.4.3",
+        "nprogress": "^0.2.0",
         "react": "^15.6.2",
         "react-dom": "^15.6.2",
         "react-intl": "^2.8.0",

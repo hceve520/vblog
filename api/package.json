@@ -1,8 +1,8 @@
 {
-  "name": "entry",
-  "version": "2018.03.19",
+  "name": "api",
+  "version": "2018.04.02",
   "build": "1",
-  "description": "entry",
+  "description": "api",
   "main": "app.js",
   "scripts": {
     "test": "standard --verbose | snazzy",

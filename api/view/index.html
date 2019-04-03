@@ -15,14 +15,8 @@
         body{
             margin: 0px 0px 0px 0px;
         }
-        @font-face{
-          font-family: DS-DIGIB;
-          src: url('<%= prefix %>/assets/public/fonts/DS-Digital.ttf');
-        }
   </style>
   
-  <!-- 正式环境中,请将上面几个链接替换为下面的链接,注意 {version} 改为你对应的资源版本号 -->
-  <!--<link rel="stylesheet" href="//g.alicdn.com//{version}??lib/next.css,pages/help/index.bundle.css">-->
   <link rel="shortcut icon" href="<%= prefix %>/assets/public/img/favicon.ico" type="image/vnd.microsoft.icon" />
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
@@ -40,17 +34,11 @@
   window.apiPrefix = "<%= apiPrefix %>"
   window.reqPrefix = "<%= reqPrefix %>"
   window.uppsPrefix = "<%= uppsPrefix %>"
-  window.menu_qz = JSON.parse(unescape("<%= menu_qz %>"))
-  window.cityInfoReqPrefix = "<%= cityInfoReqPrefix %>"
   window.commonUserReqPrefix = "<%= commonUserReqPrefix %>"
   window.logoutPage = "<%= logoutPage %>"
-  // window.TILE_URL = 'http://101.132.143.61:25003/v3/tile?z={z}&x={x}&y={y}'
-  window.mapServer = unescape("<%= mapServer %>")
   window.prefix = "<%= prefix %>",
   window.userInfo = JSON.parse(unescape("<%= userInfo %>"))
-  window.cityData = {
-    unAuthComs:[]
-  }
+
   var cw = document.documentElement.clientWidth;
         if (cw > 1920) {
             cw = 1920;

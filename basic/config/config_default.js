@@ -38,23 +38,6 @@ module.exports = {
       module: 'honeypack',
       router: '/assets'
     },
-    commonUserAuth : {
-      enable: false,
-      module: '@ali/common-user-auth',
-      config: {
-        logUrl: '/event-handle-v2/login',
-        cookieName: 'SJCZ_USER_COOKIE',
-        // ssoTicketCheckUrl: 'http://10.218.135.103:8777/user/ticketCheck',
-        ssoTicketCheckUrl: 'http://127.0.0.1:8080/perceiveing/event/user/ticketCheck',
-        ignore: [
-          '/login',
-          '/api/proxy/commonUser/user/login',
-          '/api/proxy/eventHandle/event/user/login',
-          '/api/getCookies',
-          '/api/setCookies'
-        ]
-      }
-    },
 
     thirdPartyBind: {
       enable: false,
@@ -63,10 +46,6 @@ module.exports = {
     login: {
       enable: false,
       module: '../middleware/login'
-    },
-    aliyunLogin: {
-      enable: false,
-      module: '@ali/hc-aliyun-auth'
     },
     loginLocal: {
       enable: false,
@@ -98,17 +77,13 @@ module.exports = {
     }
   },
   services: {
-    // backend_server: 'dot/api',
-	backend_server: '127.0.0.1:8084/upps',
+	  backend_server: '127.0.0.1:8084/upps',
 	  upps_server: 'dot/api',
-    commonuser_server: 'dot/api',
-    mapServer: 'http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}'
+    commonuser_server: 'dot/api'
   },
   logoutPage: '/zt/api/logout?callback=',
   // reqPrefix: '',
   reqPrefix: 'http://10.45.70.121:9222',
   uppsPrefix: '',
-  commonUserReqPrefix: '',    // 本机单机登陆
-  menu_qz:[
-  ]
+  commonUserReqPrefix: ''
 }

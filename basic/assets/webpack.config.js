@@ -112,7 +112,10 @@ const config = {
     'intl': 'Intl',
     'echarts':'echarts',
     antd:'antd',
-    'nprogress':'NProgress'
+    'nprogress':'NProgress',
+    'react-quill':'ReactQuill',
+    'prop-types':'PropTypes',
+    'highlight.js':'hljs'
   },
 
   plugins: [

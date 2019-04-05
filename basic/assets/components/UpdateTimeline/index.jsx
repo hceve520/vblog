@@ -11,6 +11,7 @@ export default class UpdateTimeline extends Component{
                 <Timeline.Item color="green" dot={<Icon style={{ fontSize: '16px' }} type="clock-circle" />} >新增日志时间轴 2019-04-01</Timeline.Item>
                 <Timeline.Item color="green" dot={<Icon style={{ fontSize: '16px' }} type="team" />} >新增关于页 2019-04-02</Timeline.Item>
                 <Timeline.Item color="green" dot={<Icon style={{ fontSize: '16px' }} type="tool" />} >引入nprogress 2019-04-02</Timeline.Item>
+                <Timeline.Item color="green" dot={<Icon style={{ fontSize: '16px' }} type="tool" />} >新增富文本 2019-04-04</Timeline.Item>
             </Timeline>
     }
 }

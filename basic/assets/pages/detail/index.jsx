@@ -1,8 +1,8 @@
 import React,{ Component } from 'react'
 import {observer,inject} from 'mobx-react'
-import ReactQuill, { Quill } from 'react-quill';
-import { ImageDrop } from 'quill-image-drop-module';
-import 'react-quill/dist/quill.snow.css';
+import ReactQuill, { Quill } from 'react-quill'
+import { ImageDrop } from 'quill-image-drop-module'
+import hljs from 'highlight.js'
 
 Quill.register('modules/imageDrop', ImageDrop);
 ImageDrop.prototype.handlePaste = function(evt) {
@@ -45,6 +45,9 @@ export default class Detail extends Component{
                 ['clean']
               ]
             },
+            syntax : {
+                highlight: text => hljs.highlightAuto(text).value
+            },
             imageDrop: true
           }
       }
@@ -55,8 +58,8 @@ export default class Detail extends Component{
     render(){
         return <div>
                 {this.props.params.id}
-                <ReactQuill modules={this.modules}
-                    onChange={this.handleChange} value={this.state.text}
+                <ReactQuill modules={this.modules} onChange={this.handleChange}
+                    style={{height:'30rem'}} value={this.state.text}
                 />
         </div>
     }

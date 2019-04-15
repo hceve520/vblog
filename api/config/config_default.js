@@ -98,6 +98,5 @@ module.exports = {
   logoutPage: '/zt/api/logout?callback=',
   apiPrefix: 'api/proxy/apiPrefix',
   reqPrefix: 'http://localhost:8001/entry',
-  uppsPrefix: '',
-  commonUserReqPrefix: ''
+  uppsPrefix: ''
 }

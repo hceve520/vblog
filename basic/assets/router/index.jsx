@@ -1,6 +1,7 @@
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import React from 'react'
 import Layout from 'components/Layout'
+import NotFound from '../pages/notFound'
 
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import enUS from 'antd/lib/locale-provider/en_US';
@@ -57,10 +58,12 @@ export default class extends React.Component {
     return (
       <LocaleProvider locale={returnLanguage() === 'zh-cn' ? zhCN : enUS}>
         <Router history={browserHistory}>
-          <Route component={Layout} path="/entry">
-            {/* <IndexRoute getComponent={home} /> */}
-            {routerItem}
+        <Route path="/entry">
+          <Route component={Layout}>
+              {routerItem}
           </Route>
+          <Route component={NotFound} path="*"/>
+        </Route>
         </Router>
       </LocaleProvider>
     )

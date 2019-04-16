@@ -36,7 +36,7 @@ class Article extends Component{
             itemLayout="vertical"
             renderItem={item => (
           <List.Item
-              actions={[<IconText text="156" type="star-o" />, <IconText text="156" type="like-o" />, <IconText text="2" type="message" />]}
+              actions={[<IconText key={1} text="156" type="star-o" />, <IconText key={2} text="156" type="like-o" />, <IconText key={3} text="2" type="message" />]}
               extra={<img alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" width={272} />}
               key={item.title}
           >

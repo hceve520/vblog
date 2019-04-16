@@ -6,6 +6,7 @@
         {"name":"home","path":"home","component":"home"},
         {"name":"updateLog","path":"updateLog","component":"updateLog"},
         {"name":"about","path":"about","component":"about"},
-        {"name":"detail","path":"detail/:id","component":"detail"}
+        {"name":"detail","path":"detail/:id","component":"detail"},
+        {"name":"write","path":"write","component":"write"}
     ]
 }

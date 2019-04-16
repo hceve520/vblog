@@ -57,11 +57,8 @@ export default class Detail extends Component{
       }
 
     render(){
-        return <div>
-                {this.props.params.id}
-                <ReactQuill modules={this.modules} onChange={this.handleChange}
-                    style={{height:'30rem'}} value={this.state.text}
-                />
-        </div>
+        return <ReactQuill modules={this.modules} onChange={this.handleChange}
+            style={{height:'30rem'}} value={this.state.text}
+               />
     }
 }

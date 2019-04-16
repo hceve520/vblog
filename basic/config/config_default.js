@@ -38,7 +38,10 @@ module.exports = {
       module: 'honeypack',
       router: '/assets'
     },
-
+    upload: {
+      enable: true,
+      module: '../middleware/upload'
+    },
     thirdPartyBind: {
       enable: false,
       module: '../middleware/thirdPartyBind'

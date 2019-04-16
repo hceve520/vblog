@@ -12,6 +12,8 @@ export default class UpdateTimeline extends Component{
                 <Timeline.Item color="green" dot={<Icon style={{ fontSize: '16px' }} type="team" />} >新增关于页 2019-04-02</Timeline.Item>
                 <Timeline.Item color="green" dot={<Icon style={{ fontSize: '16px' }} type="tool" />} >引入nprogress 2019-04-02</Timeline.Item>
                 <Timeline.Item color="green" dot={<Icon style={{ fontSize: '16px' }} type="tool" />} >新增富文本 2019-04-04</Timeline.Item>
+                <Timeline.Item color="green" dot={<Icon style={{ fontSize: '16px' }} type="tool" />} >图片上传七牛云 2019-04-16</Timeline.Item>
+                <Timeline.Item color="green">Add Page 404NotFound 2019-04-16</Timeline.Item>
             </Timeline>
     }
 }

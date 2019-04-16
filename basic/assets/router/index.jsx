@@ -1,11 +1,12 @@
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 import React from 'react'
 import Layout from 'components/Layout'
-import NotFound from '../pages/notFound'
+import NotFound from '../public/img/404.jpg'
 
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import enUS from 'antd/lib/locale-provider/en_US';
 import { LocaleProvider } from 'antd';
+
 
 
 
@@ -55,6 +56,17 @@ export default class extends React.Component {
       return language
     }
 
+    const notFound = ()=>(
+      <div style={{width: '100%',
+        height: '100%',
+        display:'flex',
+        justifyContent: 'center',
+        alignItems: 'center'}}>
+        <img style={{    width: '100%',
+          maxWidth: '1024px'}}src={NotFound}/>
+      </div>
+    )
+
     return (
       <LocaleProvider locale={returnLanguage() === 'zh-cn' ? zhCN : enUS}>
         <Router history={browserHistory}>
@@ -62,7 +74,7 @@ export default class extends React.Component {
           <Route component={Layout}>
               {routerItem}
           </Route>
-          <Route component={NotFound} path="*"/>
+          <Route component={notFound} path="*"/>
         </Route>
         </Router>
       </LocaleProvider>

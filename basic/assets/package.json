@@ -20,6 +20,7 @@
         "axios": "^0.17.1",
         "axios-cancel": "^0.2.2",
         "gravatar": "^1.8.0",
+        "gsap": "^2.1.2",
         "highlight.js": "^9.15.6",
         "mobx": "^5.9.0",
         "mobx-react": "^5.4.3",
